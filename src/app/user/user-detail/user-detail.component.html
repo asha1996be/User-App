@@ -1,0 +1,20 @@
+<div class="main-title"><span>User Detail</span></div>
+<mat-divider></mat-divider>
+<div class="breadcrumb">
+  <span class="link" (click)="getUserList()">User List</span>/
+  <span class="breadcrumb-tail">Detail</span>
+</div>
+<mat-card *ngIf="userDetail">
+  <div class="user-container">
+    <div class="user-icon"><img src={{userDetail.avatar}} width="250px" title="{{userDetail.first_name}}"></div>
+    <mat-list>
+      <mat-list-item>First Name : {{userDetail.first_name}}</mat-list-item>
+      <mat-list-item>Last Name : {{userDetail.last_name}}</mat-list-item>
+      <mat-list-item>Email : {{userDetail.email}}</mat-list-item>
+      <mat-list-item>UserId : {{userDetail.id}}</mat-list-item>
+    </mat-list>
+  </div>
+</mat-card>
+<mat-card *ngIf="!userDetail" class="message">
+  <span>Please Try Again..!!!</span>
+</mat-card>

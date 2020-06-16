@@ -1,0 +1,35 @@
+<div class="main-title">
+  <span>User List</span>
+  <img src="assets/images/logout-icon.png" width="50px" height="32px" class="left" (click)="logout()">
+</div>
+<mat-divider></mat-divider>
+<mat-card *ngIf="noUserData" class="message">
+  <span>No User Data!!!</span>
+</mat-card>
+<mat-card *ngIf="errMessage" class="message">
+  <span>Please Try Again..!!!</span>
+</mat-card>
+<mat-card [hidden]="userList.length>0">
+  <input matInput (keyup)="applyFilter($event)" placeholder="Filter..." id="filterstyle">
+  <mat-table class="lessons-table mat-elevation-z8" [dataSource]="userList" matSort>
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.email}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="first_name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>First Name</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.first_name}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="last_name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.last_name}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="avatar">
+      <mat-header-cell *matHeaderCellDef>Avatar</mat-header-cell>
+      <mat-cell *matCellDef="let element"><img src={{element.avatar}} style="width: 40px;"></mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns" (click)="userDetails(row)"></mat-row>
+  </mat-table>
+  <mat-paginator [hidden]="userList.length>0" [pageSizeOptions]="[5, 12, 22]" showFirstLastButtons></mat-paginator>
+</mat-card>

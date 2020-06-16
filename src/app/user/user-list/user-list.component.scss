@@ -1,0 +1,76 @@
+#filterstyle {
+  width: 25%;
+  padding: 10px;
+  margin-bottom: 40px;
+  border-color: #7a577e;
+}
+
+.main-title {
+  color: #7a577e;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+}
+
+.message {
+  margin: 10px;
+  padding: 40px;
+  font-size: 20px;
+  color: #7a577e;
+  text-align: center;
+}
+
+mat-header-row {
+  min-height: 56px;
+  background-color: #7a577e;
+}
+
+.mat-header-cell {
+  color: #ffffff;
+}
+
+.mat-cell {
+  padding: 5px;
+  word-break: break-word;
+}
+
+.mat-paginator,
+mat-header-row {
+  background-color: #7a577e;
+  color: #ffffff;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: #e0e3e660;
+}
+
+.mat-paginator,
+mat-header-row {
+  background-color: #7a577e;
+  color: #ffffff;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: #e0e3e660;
+}
+
+.mat-cell {
+  padding: 5px;
+  word-break: break-word;
+}
+
+.mat-paginator-page-size-select>.mat-form-field-wrapper>.mat-form-field-flex>.mat-form-field-infix>.mat-select>.mat-select-trigger>.mat-select-value {
+  color: white;
+}
+
+.mat-paginator-page-size-select>.mat-form-field-wrapper>.mat-form-field-flex>.mat-form-field-infix>.mat-select>.mat-select-trigger>.mat-select-arrow-wrapper>.mat-select-arrow {
+  color: #ffffff !important;
+}
+
+.mat-paginator-page-size-select>.mat-form-field-wrapper>.mat-form-field-underline {
+  background-color: #ffffff !important;
+}
+
+.left {
+  float: right;
+}
